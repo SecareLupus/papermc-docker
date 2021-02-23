@@ -1,10 +1,18 @@
 # PaperMC Docker
 This is a Linux Docker image for the PaperMC Minecraft server.
 
-PaperMC is an optimized Minecraft server with plugin support (Bukkit, Spigot, Sponge, etc.).
-This image provides a basic PaperMC server. All customizations are left to the user.
+PaperMC is an optimized Minecraft server with plugin support (Bukkit, Spigot, Sponge, etc.).  
+This image provides a basic PaperMC server running on a alpine amazon corretto setup, this is a testing setup for a 1 core, 2GB ram.  
+All customizations are left to the user.  
+
 # Usage
-It is assumed that the user has already acquired a working Docker installation. If that is not the case, go do that and come back here when you're done.
+It is assumed that the user has already acquired a working Docker installation. If that is not the case, go do that and come back here when you're done.  
+First, do docker build -t <your tag name> .  
+Then:  
+##### sudo docker run -p 25565:25565 -v <Your folder>:/papermc --restart on-failure -e MC_VERSION=1.16.4 -e PAPER_BUILD=416 -e MC_RAM=1433M --name=paperMCserver <your tag name>  
+Change the tags according to your setup.
+
+
 ## Command
 With this image, you can create a new PaperMC Minecraft server with one command (note that running said command indicates agreement to the Minecraft EULA). Here is an example:
 
