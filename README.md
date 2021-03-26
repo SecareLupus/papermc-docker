@@ -11,13 +11,14 @@ It is assumed that the user has already acquired a working Docker installation. 
 First, do  
 ##### docker build -t <your tag name> .  
 Then:  
-##### sudo docker run -p 25565:25565 -v <Your folder>:/papermc --restart on-failure -e MC_VERSION=1.16.4 -e PAPER_BUILD=416 -e MC_RAM=1433M -e JAVA_OPTS="-XX:+UseG1GC"--name=paperMCserver <your tag name>  
+##### sudo docker run -p 25565:25565 -v <Your folder>:/papermc --restart on-failure -e MC_VERSION=1.16.4 -e PAPER_BUILD=416 -e MC_RAMH=1024M -e MC_RAMH=1433M -e JAVA_OPTS="-XX:+UseG1GC"--name=paperMCserver <your tag name>  
 
 Change the tags according to your setup.
 
 ## Results of using this setup  
 
-Using it seems to increse performance and reduce memory usage on a 2GB, 1 core server with 2-3 players. The use of G1GC also helped us to reduce memory usage even further, at the cost of cpu usage. With this setup we see a cpu at 33% usage and ram at 1.5G locked. 
+Using it seems to increase performance and reduce memory usage on a 2GB, 1 core server with 2-3 players. The use of G1GC also helped us to reduce memory usage even further, at the cost of cpu usage. With this setup we see a cpu at 33% usage and ram at 1.5G locked.  
+The use of the garbage collector G1GC also decreases ram usage and focus more on process usage.  
 
 ## Command
 With this image, you can create a new PaperMC Minecraft server with one command (note that running said command indicates agreement to the Minecraft EULA). Here is an example:
