@@ -9,9 +9,9 @@ All customizations are left to the user.
 It is assumed that the user has already acquired a working Docker installation. If that is not the case, go do that and come back here when you're done.  
 
 First, do  
-##### docker build -t <your tag name> .  
+##### docker build -t "your tag name" .  
 Then:  
-##### sudo docker run -p 25565:25565 -v <Your folder>:/papermc --restart on-failure -e MC_VERSION=1.16.4 -e PAPER_BUILD=416 -e MC_RAMH=1024M -e MC_RAMH=1433M -e JAVA_OPTS="-XX:+UseG1GC"--name=paperMCserver <your tag name>  
+##### sudo docker run -p 25565:25565 -v <Your folder>:/papermc --restart on-failure -e MC_VERSION=1.16.4 -e PAPER_BUILD=416 -e MC_RAMH=1024M -e MC_RAMH=1433M -e JAVA_OPTS="-XX:+UseG1GC"--name=paperMCserver "your tag name"  
 
 Change the tags according to your setup.
 
