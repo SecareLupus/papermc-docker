@@ -5,7 +5,7 @@ FROM amazoncorretto:11.0.10-alpine
 ENV MC_VERSION="latest" \
     PAPER_BUILD="latest" \
     MC_RAML="1G" \
-    MC_RAMH="2G" \
+    MC_RAMH="1G" \
     JAVA_OPTS=""
 
 ADD papermc.sh .
