@@ -1,5 +1,5 @@
 # JRE base
-FROM amazoncorretto:11.0.10-alpine
+FROM amazoncorretto:11.0.11-alpine
 
 # Environment variables
 ENV MC_VERSION="latest" \
